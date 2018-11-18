@@ -3,7 +3,7 @@ exports.up = (knex) => {
         table.increments('id').unsigned().primary();
         table.string("teacher_name").notNull();
         table.string("teacher_address").notNull();
-        table.integer("school_id").notNull();
+        table.integer("school_id").references('id').inTable('schools').notNull();
         table.dateTime('createdAt').notNull();
         table.dateTime('updatedAt').nullable();
     });
