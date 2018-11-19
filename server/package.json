@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "knex": "^0.15.2",
-    "pg": "^7.6.1"
+    "pg": "^7.6.1",
+    "save": "^2.3.2"
   }
 }
