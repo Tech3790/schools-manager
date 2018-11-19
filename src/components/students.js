@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "./navbar.js";
 import AddStudent from "./addStudent.js";
 import RemoveStudent from "./removeStudent.js";
+import GetStudent from './getStudents.js';
 
 export default class Students extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Students extends Component {
     return (
       <div>
         <Navbar />
+        <GetStudent />
         <AddStudent />
         <RemoveStudent />
       </div>

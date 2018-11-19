@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 
-export default class AddClass extends Component {
+export default class GetTeachers extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    return(
-     <div>Add classes here :
-    </div>
-    );
+    return <div> List of current teachers :</div>;
   }
 }
