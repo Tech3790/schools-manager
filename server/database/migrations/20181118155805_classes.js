@@ -7,11 +7,6 @@ exports.up = knex => {
     table.string("class_name").notNull();
     table.string("class_size").notNull();
     table
-      .integer("school_id")
-      .notNull()
-      .references("id")
-      .inTable("schools");
-    table
       .integer("teacher_id")
       .notNull()
       .references("id")

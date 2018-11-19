@@ -6,6 +6,14 @@ export default class AddClass extends Component {
     this.state = {};
   }
   render() {
-    return <div>Add classes here :</div>;
+    return(
+     <div>Add classes here :
+      <div>
+        <ul>
+          
+        </ul>
+      </div>
+    </div>
+    );
   }
 }

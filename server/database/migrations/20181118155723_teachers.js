@@ -6,10 +6,6 @@ exports.up = knex => {
       .primary();
     table.string("teacher_name").notNull();
     table.string("teacher_address").notNull();
-    table
-      .integer("school_id")
-      .references("id")
-      .inTable("schools");
     table.timestamps(true, true);
   });
 };
