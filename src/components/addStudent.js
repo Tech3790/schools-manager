@@ -6,6 +6,14 @@ export default class AddStudent extends Component {
     this.state = {};
   }
   render() {
-    return <div>Add Students here :</div>;
+    return (
+      <div>
+        <p>Student Name : </p>
+        <input type="text" placeholder="Enter student name .." />
+        <p>Address : </p>
+        <input type="text" placeholder="Enter Address .." />
+        <input type="button" value="Add student" />
+      </div>
+    );
   }
 }
