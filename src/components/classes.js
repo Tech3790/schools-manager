@@ -47,7 +47,7 @@ export default class Classes extends Component {
       .get("http://localhost:8080/teachers")
       .then(teachers => {
         this.setState({
-          currentTeachers: [...this.state.currentTeachers, ...teachers.data]
+          currentTeachers: teachers.data
         });
       })
       .catch(error => {

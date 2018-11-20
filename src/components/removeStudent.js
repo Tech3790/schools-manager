@@ -12,7 +12,7 @@ export default class RemoveStudent extends Component {
         <div>
           <ul className="ulDiv">
             {this.props.students.map((student, i) => (
-              <div className="ulDiv">
+              <div className="ulDiv" key={i}>
                 <li key={i} className="teachersLi">
                   {student.student_name}
                 </li>
