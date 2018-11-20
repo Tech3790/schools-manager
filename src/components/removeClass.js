@@ -8,20 +8,26 @@ export default class RemoveClass extends Component {
   render() {
     return (
       <div>
-        Remove a class here :
+        <h3>Edit or remove a class info below: </h3>
         <div>
-          <p>List of current classes :</p>
-          <ul>
+          <ul className="teahcersUl">
             {this.props.currentClasses.map((element, i) => (
-              <li key={i}>
-                {element.class_name}
-                <input type="button" value="Edit" />
+              <div className="ulDiv">
+                <li key={i} className="teachersLi">
+                  {element.class_name}
+                </li>
                 <input
                   type="button"
-                  value="X"
+                  value="Edit Class Info"
+                  className="actionButton"
+                />
+                <input
+                  className="actionButton"
+                  type="button"
+                  value="Delete Class"
                   onClick={() => this.props.deleteClass(element.class_name, i)}
                 />
-              </li>
+              </div>
             ))}
           </ul>
         </div>

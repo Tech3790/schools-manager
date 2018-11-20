@@ -8,22 +8,28 @@ export default class RemoveTeacher extends Component {
   render() {
     return (
       <div>
-        Remove a Teacher here :
+        <h3>Edit or remove teacher info below :</h3>
         <div>
-          <p>List of current Teachers :</p>
-          <ul>
+          <ul className="teachersUl">
             {this.props.teachers.map((teacher, i) => (
-              <li key={i}>
-                {teacher.teacher_name}
-                <input type="button" value="Edit" />
+              <div key={i} className="ulDiv">
+                <li key={i} className="teachersLi">
+                  {teacher.teacher_name}
+                </li>
                 <input
                   type="button"
-                  value="X"
+                  value="Edit Teacher Info"
+                  className="actionButton"
+                />
+                <input
+                  className="actionButton"
+                  type="button"
+                  value="Delete Teacher"
                   onClick={() =>
                     this.props.deleteTeacher(teacher.teacher_name, i)
                   }
                 />
-              </li>
+              </div>
             ))}
           </ul>
         </div>
