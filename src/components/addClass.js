@@ -11,16 +11,32 @@ export default class AddClass extends Component {
       <div>
         <p>Add classes here :</p>
         <p>Class name : </p>
-        <input type="text" placeholder="enter class name .." />
-        <p>Teacher : </p>
-        <select>
-          {this.props.currentTeachers.map((teacher, i) => (
-            <option key={i}>{teacher.teacher_name}</option>
-          ))}
-        </select>
-        <p>Max number of students :</p>
-        <input type="text" placeholder="numeric value .." />
-        <input type="button" value="Add class" />
+        <form onSubmit={this.props.handleSubmit.bind(this)}>
+          <input
+            type="text"
+            placeholder="enter class name .."
+            onChange={this.props.classNameChanged}
+          />
+          <p>Teacher : </p>
+          <select onChange={this.props.onTeacherSelect}>
+            {this.props.currentTeachers.map((teacher, i) => (
+              <option value={teacher.teacher_name} key={i}>
+                {teacher.teacher_name}
+              </option>
+            ))}
+          </select>
+          <p>Max number of students :</p>
+          <input
+            type="text"
+            placeholder="numeric value .."
+            onChange={this.props.classSizeChanged}
+          />
+          <input
+            type="submit"
+            value="Add class"
+            onClick={this.props.addClass}
+          />
+        </form>
       </div>
     );
   }

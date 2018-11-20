@@ -16,7 +16,11 @@ export default class RemoveClass extends Component {
               <li key={i}>
                 {element.class_name}
                 <input type="button" value="Edit" />
-                <input type="button" value="X" />
+                <input
+                  type="button"
+                  value="X"
+                  onClick={() => this.props.deleteClass(element.class_name, i)}
+                />
               </li>
             ))}
           </ul>

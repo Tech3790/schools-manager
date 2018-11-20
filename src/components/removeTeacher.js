@@ -12,11 +12,17 @@ export default class RemoveTeacher extends Component {
         <div>
           <p>List of current Teachers :</p>
           <ul>
-            {this.props.currentTeachers.map((teacher, i) => (
+            {this.props.teachers.map((teacher, i) => (
               <li key={i}>
                 {teacher.teacher_name}
                 <input type="button" value="Edit" />
-                <input type="button" value="X" />
+                <input
+                  type="button"
+                  value="X"
+                  onClick={() =>
+                    this.props.deleteTeacher(teacher.teacher_name, i)
+                  }
+                />
               </li>
             ))}
           </ul>
